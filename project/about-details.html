@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Products - Natural Fibres | Toyota Weavers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+    <style>
+        body.about-page { background: linear-gradient(to bottom, var(--ivory), var(--ivory-dark)); }
+        #hero { background: linear-gradient(rgba(28,26,23,0.5), rgba(28,26,23,0.3)), url('collage1.jpg') center/cover no-repeat; }
+        .materials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 64px; }
+        .thread-hero { background: linear-gradient(rgba(247,242,234,0.1), rgba(247,242,234,0.1)), url('https://img.freepik.com/free-photo/full-frame-view-smooth-textiles_23-2147874950.jpg?semt=ais_hybrid&w=740&q=80') center/cover; height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--charcoal); border: 1px solid #F6C9E7;}
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .float-anim { animation: float 6s ease-in-out infinite; }
+        
+        .ticker-container {
+            width: 100%;
+            overflow: hidden;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            background: var(--charcoal);
+            border-top: 1px solid rgba(184,146,90,0.25);
+            border-bottom: 1px solid rgba(184,146,90,0.25);
+        }
+        .ticker-track {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            min-width: 200%;
+            justify-content: space-around;
+            animation: ticker-scroll 18s linear infinite;
+            will-change: transform;
+        }
+        .ticker-item {
+            font-size: 0.62rem;
+            font-weight: 400;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--stone);
+            padding: 0 48px;
+        }
+        .ticker-dot {
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+        @keyframes ticker-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .ticker-container:hover .ticker-track {
+            animation-play-state: paused;
+        }
+        .blends-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--font-body);
+            margin-top: 8px;
+        }
+        .blends-table thead tr {
+            border-bottom: 2px solid var(--gold);
+        }
+        .blends-table th {
+            padding: 16px;
+            text-align: left;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+        .blends-table td {
+            padding: 16px;
+            color: var(--ink);
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(216,207,190,0.4);
+        }
+        .blends-table tbody tr:hover {
+            background: rgba(216,207,190,0.15);
+        }
+    </style>
+    <script>
+    window.onload = function () {
+      setTimeout(function () {
+      alert("This page is still being developed. The mobile version may not work as intended yet.");
+      }, 300);
+    };
+  </script>
+</head>
+<body class="about-page">
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-logo">Toyota <span>Weavers</span></a>
+        <div class="nav-links">
+            <a href="./index.html" class="nav-cta">Home</a>
+            <a href="./catalogue.html">Catalogue</a>
+            <a href="./index.html#about">About</a>
+            <a href="./about-details.html">Products</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+        <a href="./contact.html" class="nav-cta">Enquire</a>
+        <div class="nav-burger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-grain"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Natural Fibres<br><em>Excellence</em></h1>
+            <p class="hero-sub reveal reveal-delay-1">Discover our premium sustainable textiles crafted from the finest natural materials. Breathable, durable, and eco-friendly.</p>
+            <div class="hero-actions reveal reveal-delay-2">
+                <a href="#materials" class="btn-primary">Explore Materials</a>
+                <a href="#weaves" class="btn-ghost">View Weaves</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint reveal reveal-delay-4">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Ticker -->
+    <div class="ticker-container">
+        <div class="ticker-track" aria-hidden="true">
+            <span class="ticker-item">Cotton</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Linen</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Hemp</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Bamboo</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Piña</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Jute</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Coir</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Cotton</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Linen</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Hemp</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Bamboo</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Piña</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Jute</span><span class="ticker-dot">&#10022;</span>
+            <span class="ticker-item">Coir</span><span class="ticker-dot">&#10022;</span>
+        </div>
+    </div>
+
+    <!-- Materials Section -->
+    <section id="materials" class="reveal">
+        <div class="section-label">
+            <span>01</span> Natural Materials
+        </div>
+        <h2 class="section-title">Our Fibre Portfolio</h2>
+        <p class="section-body">Toyota Weavers offers quality without compromise - whether you seek luxury appeal, sustainable choices, or regional exclusivity, our portfolio ensures every product reflects craftsmanship, comfort, and responsibility.</p>
+        <div class="materials-grid">
+    <div class="card reveal reveal-delay-1">
+        <div class="card-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFp-vtBl5iO2ZpTfGeFoRg85WsMFM6DeaWNg&s" alt="Cotton" loading="lazy">
+        </div>
+        <div class="card-content">
+            <div class="card-category">Natural Cellulosic Fibre</div>
+            <h3 class="card-title">Cotton</h3>
+            <p class="card-description">
+                100% Cotton offers natural softness, breathability, and everyday comfort. Supima Cotton 
+                is premium American extra-long staple cotton known for exceptional softness, strength, and 
+                color retention. Egyptian Cotton delivers luxurious feel, fine fibres, and superior durability. 
+                Organic Cotton is grown without harmful chemicals, supporting cleaner farming and conscious 
+                sourcing. Recycled Cotton transforms pre- or post-consumer textile waste into new fibre, 
+                reducing landfill impact and resource use. Together, these cotton choices meet performance, 
+                luxury, and sustainability demands.
+            </p>
+        </div>
+    </div>
+
+           <div class="card reveal reveal-delay-2">
+    <div class="card-image">
+        <img src="https://d2cdumevpofl17.cloudfront.net/ce-s3/0ce6cd5ea6e21073136fc968efda18630885384b.jpg" alt="Flax Linen" loading="lazy">
+    </div>
+    <div class="card-content">
+        <div class="card-category">Structural Plant Fibre</div>
+        <h3 class="card-title">European Flax Linen</h3>
+        <p class="card-description">
+            European Flax linen is a premium natural fibre known for its strength, breathability, and timeless appeal. It requires relatively low water and fewer agricultural inputs, making it a considered choice for sustainable production. Naturally moisture-wicking and temperature-regulating, linen becomes softer with use while maintaining its durability. Well suited for table linens, upholstery, and lightweight bedding, it offers lasting comfort with a refined finish.
+        </p>
+    </div>
+</div>
+            <div class="card reveal reveal-delay-3">
+    <div class="card-image">
+        <img src="https://3.imimg.com/data3/KJ/EC/MY-62305/natural-colour-jute-fabric.jpg" alt="Jute" loading="lazy">
+    </div>
+    <div class="card-content">
+        <div class="card-category">Golden Fibre</div>
+        <h3 class="card-title">Jute</h3>
+        <p class="card-description">
+            Jute is a durable natural fibre widely used for its strength and versatility. Grown primarily in alluvial regions, it matures quickly and requires relatively low agricultural inputs. Its coarse texture and natural finish make it suitable for bags, rugs, mats, carpets, and upholstery backing. Biodegradable and renewable, jute serves as a practical material for applications where durability and environmental consideration are important.
+        </p>
+    </div>
+</div>
+           <div class="card reveal reveal-delay-1">
+    <div class="card-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7SWEniPFiUQWI9OB8iH1jZvwMA6UXMO3gGQ&s" alt="Hemp" loading="lazy">
+    </div>
+    <div class="card-content">
+        <div class="card-category">Sustainable Stalk Fibre</div>
+        <h3 class="card-title">Hemp</h3>
+        <p class="card-description">
+            Hemp is a durable natural fibre valued for its strength and low environmental impact. It grows quickly with minimal water and inputs. Naturally breathable and long-lasting, hemp softens with use while retaining structure, making it suitable for upholstery, outdoor textiles, and workwear.
+        </p>
+    </div>
+</div>
+    <div class="card reveal reveal-delay-2">
+    <div class="card-image">
+        <img src="https://fabriclore.com/cdn/shop/articles/Tobe_Green_Tencel_1_4271c1e7-be62-44eb-bf65-4bbf1665ce55.jpg?v=1745564211&width=2048" alt="Tencel" loading="lazy">
+    </div>
+    <div class="card-content">
+        <div class="card-category">Regenerated Cellulose Fibre</div>
+        <h3 class="card-title">Tencel</h3>
+        <p class="card-description">
+            Tencel, a branded lyocell fibre, is sourced sustainably from eucalyptus wood pulp through an award-winning closed-loop process. It delivers outstanding moisture management, silky softness, and strength comparable to synthetic alternatives. Ideal for sensitive skin, Tencel is used in our premium bedding and apparel lines. The solvent-spinning method recycles nearly all water and chemicals, making it one of the most environmentally responsible fibres available.
+        </p>
+    </div>
+    </div>
+    <div class="card reveal reveal-delay-3">
+    <div class="card-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4__FYIRcgoOl8uaydBD5sYegYA0h6uKI-A&s" alt="Modal" loading="lazy">
+    </div>
+    <div class="card-content">
+        <div class="card-category">Semi-Synthetic Fibre</div>
+        <h3 class="card-title">Modal</h3>
+        <p class="card-description">
+            Modal is a premium cellulosic fibre extracted from beech tree pulp, known for exceptional softness and colour retention. It resists shrinkage and fading while remaining breathable and smooth. We incorporate modal into luxury apparel and bedding collections where comfort and longevity matter. Produced through a closed-loop process, it represents a more sustainable alternative to conventional viscose, minimising waste and environmental impact.
+        </p>
+    </div>
+    </div>
+    <div class="card reveal reveal-delay-1">
+    <div class="card-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsKKudpQjDmcPTg0qk_v9ftSgjw8sVazOhdA&s" alt="Viscose" loading="lazy">
+    </div>
+    <div class="card-content">
+        <div class="card-category">Semi-Synthetic Fibre</div>
+        <h3 class="card-title">Viscose</h3>
+        <p class="card-description">
+            Viscose is a semi-synthetic fibre derived from wood pulp, offering a silk-like feel at an accessible price. It drapes beautifully, absorbs moisture well, and breathes comfortably against the skin. At Toyota Weavers, we use viscose for apparel and soft furnishings where fluidity and lustre are desired. Though plant-based, it undergoes chemical processing, so we source from responsible manufacturers prioritising reduced emissions and water recovery.
+        </p>
+    </div>
+    </div>
+    <div class="card reveal reveal-delay-2">
+    <div class="card-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/4/412837087/BE/JL/DH/126242111/poly-rayon-60.jpeg" alt="Rayon" loading="lazy">
+    </div>
+    <div class="card-content">
+        <div class="card-category">Regenerated Cellulose Fibre</div>
+        <h3 class="card-title">Rayon</h3>
+        <p class="card-description">
+            Rayon is a versatile regenerated cellulosic fibre made from wood and agricultural by-products. It mimics the comfort of natural fibres while allowing diverse textures from crisp to velvety. At Toyota Weavers, we employ rayon in apparel and home textiles requiring excellent drape and absorbency. As a plant-based material, it offers a renewable foundation, and we prioritise suppliers committed to responsible forestry and cleaner production methods.
+        </p>
+    </div>
+    </div>
+    <div class="card reveal reveal-delay-3">
+    <div class="card-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIY97nss4S9VS7YqII-3GNyN9sjgX64_q9JA&s" alt="Banana Fibre" loading="lazy">
+    </div>
+    <div class="card-content">
+        <div class="card-category">Waste-to-Wealth Fibre</div>
+        <h3 class="card-title">Banana</h3>
+        <p class="card-description">
+            Banana fibre is extracted from the pseudo-stem of banana plants, a by-product of fruit cultivation. Strong and biodegradable, it offers a coarse yet versatile texture suitable for ropes, mats, and decorative textiles. At Toyota Weavers, we value banana fibre for its sustainability credentials and unique character. It requires minimal additional land or water, turning agricultural waste into durable, eco-conscious material.
+        </p>
+    </div>
+    </div>
+    <div class="card reveal reveal-delay-1">
+    <div class="card-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbwFi_x_k0WDmZnbKcEAa3Tmwe18m36Z-Ipg&s" alt="Exotic Specialties" loading="lazy">
+    </div>
+    <div class="card-content">
+        <div class="card-category">Specialty Natural Fibres</div>
+        <h3 class="card-title">Bamboo & Coir</h3>
+        <p class="card-description">
+            These specialty fibres offer unique properties and sustainable sourcing. Bamboo is soft and breathable. Coir, sourced from coconut husks, is durable and water-resistant. Together, they support diverse applications from apparel to home textiles.
+        </p>
+    </div>
+    </div>
+</div>
+    </section>
+
+    <!-- Weave Types Section -->
+    <section id="weaves" style="background: var(--charcoal);">
+        <div class="reveal">
+            <div class="section-label" style="color: var(--gold-light);">
+                <span>02</span> Weaving Expertise
+            </div>
+            <h2 class="section-title" style="color: var(--ivory);">Master Weave Structures</h2>
+            <p class="section-body" style="color: rgba(247,242,234,0.9);">From Classic Plain Weave- Percale, Satin, Dobby- Stripes & Checks to Intricate Jacquards, Twill Weave & Waffle our weaves ensure premium quality and versatility.</p>
+            <div class="collections-header">
+                <div class="collections-nav" style="margin-left: auto; margin-right: 0;">
+                    <button class="coll-btn" id="prev-slide" aria-label="Previous">&#8592;</button>
+                    <button class="coll-btn" id="next-slide" aria-label="Next">&#8594;</button>
+                </div>
+            </div>
+            <div class="cards-track-wrap">
+                <div class="cards-track" id="cards-track">
+                    <div class="card">
+                        <div class="card-img-wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWP7rp4N7TAK-DHgWPo7-1dGCCa4ofW36gzg&s" alt="Percale Weave"></div>
+                        <div class="card-body">
+                            <div class="card-tag">Crisp Classic</div>
+                            <h3 class="card-title">Plain Weave-Percale/Chambray/Oxford</h3>
+                            <p class="card-desc">One-over, one-under plain weave. Crisp, breathable, matte finish. Perfect for cool, fresh bedding.</p>
+                            <a href="https://en.wikipedia.org/wiki/Percale" class="card-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrap"><img src="https://www.utsavpedia.com/wp-content/uploads/2015/07/1.-httpfashionstylefan.comfabricssatin.jpg" alt="Satin Weave"></div>
+                        <div class="card-body">
+                            <div class="card-tag">Silky Luxury</div>
+                            <h3 class="card-title">Satin</h3>
+                            <p class="card-desc">Four-over, one-under weave. Smooth, lustrous surface with excellent drape. Ideal for premium sheets.</p>
+                            <a href="https://en.wikipedia.org/wiki/Satin" class="card-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrap"><img src="https://suvetah.com/cdn/shop/products/Shot3WhiteFabricsMacrolr1500.jpg?v=1639123700&width=1946" alt="Twill Weave"></div>
+                        <div class="card-body">
+                            <div class="card-tag">Diagonal Texture</div>
+                            <h3 class="card-title">Twill/Herringbone</h3>
+                            <p class="card-desc">Diagonal rib pattern from progressive weaves. Durable, wrinkle-resistant, softens with washing.</p>
+                            <a href="https://en.wikipedia.org/wiki/Twill" class="card-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtNQWq2Id8DOQ4L7wj7l15szmhSYlJA2BRg&s" alt="Jacquard Weave"></div>
+                        <div class="card-body">
+                            <div class="card-tag">Patterned Artistry</div>
+                            <h3 class="card-title">Jacquard</h3>
+                            <p class="card-desc">Complex figured patterns via individual warp control. Intricate designs for duvet covers, curtains.</p>
+                            <a href="https://ebooks.inflibnet.ac.in/hsp08/chapter/jacquard-weaving/" class="card-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrap"><img src="https://3.imimg.com/data3/EQ/LY/MY-3778736/high-quality-dobby-fabric-500x500.jpg" alt="Dobby Weave"></div>
+                        <div class="card-body">
+                            <div class="card-tag">Small Patterns</div>
+                            <h3 class="card-title">Dobby</h3>
+                            <p class="card-desc">Small geometric patterns and textures. Stripes, checks, waffle effects via dobby loom mechanism.</p>
+                            <a href="https://en.wikipedia.org/wiki/Dobby_(cloth)" class="card-link">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blends Section -->
+    <section id="blends" class="reveal">
+        <div class="section-label">
+            <span>03</span> Blends
+        </div>
+        <h2 class="section-title">Premium Fibre Blends</h2>
+        <p class="section-body">Explore our curated fibre blends crafted for various applications. 
+            The table below shows our curated blend compositions and their uses.</p>
+        <div style="margin-top: 48px; overflow-x: auto;">
+            <table class="blends-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Blend Type</th>
+                        <th style="width: 60%;">Usage Scenario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cotton Linen</td>
+                        <td>Apparels, Uniforms, Dresses, Shirts and more</td>
+                    </tr>
+                    <tr>
+                        <td>Cotton Bamboo</td>
+                        <td>Towels, Tees, Lounge Wear and more</td>
+                    </tr>
+                    <tr>
+                        <td>Cotton Viscose</td>
+                        <td>Ethnic Wear, Kurtis, Women Wear and more</td>
+                    </tr>
+                    <tr>
+                        <td>Cotton Modal</td>
+                        <td>Innerwear, T-Shirts, Leggings, Lounge Sets and more</td>
+                    </tr>
+                    <tr>
+                        <td>Cotton Lycra</td>
+                        <td>Denims, Sports Wear, Kids Wear and more</td>
+                    </tr>
+                    <tr>
+                        <td>Cotton Lurex</td>
+                        <td>Ethnic Wear, Festive Wear, Party Wear and more</td>
+                    </tr>
+                    <tr>
+                        <td>Cotton Tencel</td>
+                        <td>Apparels, Shirts, Trousers, Premium Wear and more</td>
+                    </tr>
+                    <tr>
+                        <td>Polyester Viscose</td>
+                        <td>Trousers, Blazers, Uniforms and more</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Thread Count Section -->
+    <section id="threadcount" class="reveal">
+        <div class="section-label">
+            <span>04</span> Quality Metric
+        </div>
+        <h2 class="section-title">Thread Count & Durability</h2>
+        <p class="section-body">Higher thread count means finer yarns and tighter weaves, but quality matters more than numbers.</p>
+        <div class="thread-hero float-anim reveal reveal-delay-1">
+            <div>
+                <h3 style="font-size: 3rem; margin-bottom: 20px;">Exceptional Quality</h3>
+                <p style="font-size: 1.2rem; max-width: 600px;">Our fabrics combine high thread counts with premium fibres 
+                for superior softness, strength, and longevity that endures wash after wash.</p>
+            </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 80px;">
+            <div class="reveal reveal-delay-2">
+                <h4 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 20px;">What It Means</h4>
+                <p>
+                    Thread count is the total number of horizontal (weft) and vertical (warp) threads woven 
+                    into a single square inch of fabric. We believe that true quality is found where 
+                    precision meets performance.
+                </p>
+            </div>
+            <div class="reveal reveal-delay-3">
+                <h4 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 20px;">Our Standards</h4>
+                <ul style="font-size: 1rem; line-height: 1.8;">
+                    <li>200-400 TC: Crisp Percale</li>
+                    <li>400-600 TC: Twill Weave</li>
+                    <li>600-1200: Smooth Sateen</li>
+                    <li>Jacquard: Custom counts</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: #F5F5DC; text-align: center; padding: 80px 60px;">
+        <h2 style="font-size: 3rem; color: var(--charcoal); margin-bottom: 20px;">Ready to Experience?</h2>
+        <p style="font-size: 1.1rem; color: var(--ink); margin-bottom: 40px;">Contact us for samples of our natural fibre collections.</p>
+        <a href="./contact.html" class="btn-primary" style="background: var(--charcoal); color: var(--ivory);">Request Samples</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">Toyota <span>Weavers</span></div>
+                <p class="footer-tagline">Weaving sustainability into every thread with natural fibres excellence.</p>
+            </div>
+            <div>
+                <div class="footer-col-title">Products</div>
+                <div class="footer-links">
+                    <a href="#materials">Natural Fibres</a>
+                    <a href="#weaves">Weave Types</a>
+                    <a href="#threadcount">Thread Count</a>
+                    <a href="./catalogue.html">Full Catalogue</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Company</div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about-details.html">About Products</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Connect</div>
+                <div class="contact-socials reveal reveal-delay-4">
+                    <a href="https://www.instagram.com" class="social-link" title="Instagram" target="_blank" rel="noopener noreferrer"><img src="instagram_logo.svg" width="40" height="40" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="linkedin_logo.svg" width="40" height="40" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com" class="social-link" title="Facebook" target="_blank" rel="noopener noreferrer"><img src="facebook_logo.svg" width="40" height="40" alt="Facebook"></a>
+                    <a href="https://web.whatsapp.com" class="social-link" title="WhatsApp" target="_blank" rel="noopener noreferrer"><img src="whatsapp_logo.svg" width="40" height="40" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">&copy; 2026 Toyota Weavers. All rights reserved.</div>
+            <div class="footer-legal">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="about-details.js" defer></script>
+</body>
+</html>
